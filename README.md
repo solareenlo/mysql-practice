@@ -119,3 +119,59 @@ mysql> select database();
 > +--------------------|
 > 1 row in set (0.00 sec)
 ```
+
+## 作業用ユーザーを設定し削除する
+rootユーザーでうっかりをすると大変なことになるのでDBごとに作業用ユーザーを作成する.
+```bash
+# userを新規作成
+mysql> create user dbuser01@localhost identified by '6AVAkig2@#';
+> Query OK, 0 raws affected (0.00 sec)
+
+# userにDBの権限を付与する
+>mysql grant all on mydb01.* to dbuser01@localhost;
+# grant は権限を与える.
+# all は全ての権限を与える.
+# mydb01.* はmydb01にあるテーブル全てに対して と言う意味.
+# to dbuser@localhost はdbuser@localhostに対して と言う意味.
+> Query OK, 0 raws affected (0.00 sec)
+
+# 一度rootでログアウトして, もう一度dbuser01@localhostでログインする.
+mysql> quit;
+> Bye
+mysql -u dbuser01 -p mydb01
+> Enter password:
+6AVAkig2@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+# で, 無事にdbuser01ユーザーでログインができた.
+
+# 一応確認.
+mysql> select user();
+> +--------------------+
+> | user()             |
+> +--------------------+
+> | dbuser01@localhost |
+> +--------------------|
+> 1 row in set (0.00 sec)
+# ユーザーがdbuser01になってる.
+
+# アクセスできるDBも確認.
+mysql> show databases;
+> +--------------------+
+> | Database           |
+> +--------------------+
+> | information_schema |
+> | mydb01             |
+> +--------------------|
+> 2 row in set (0.00 sec)
+# きちんとmydb01にだけアクセスするようになってる.
+
+# ユーザーの削除
+# rootユーザーでログインする
+mysql> quit;
+> Bye
+sudo mysql -u root -p
+> Enter password:
+# rootユーザーのpasswordを入力して, エンター
+mysql> drop user dbuser01@localhost;
+> Query OK, 0 raws affected (0.00 sec)
+```

@@ -12,7 +12,7 @@ insert into users (name, score) values
   ('sola', 8.2),
   ('sola', 2.8),
   ('test', null),
-  ('tanaka'),
-  ('tanaka');
+  ('tanaka', 1.1),
+  ('tanaka', 1.2);
 
 select * from users;

@@ -256,6 +256,13 @@ true/false;
 
 ## recordの挿入
 ```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+
+# 外部ファイルを使ってrecordを挿入
 mysql> \. ./insert_record.sql
 > +----------------------+
 > | id  | name   | score |
@@ -270,5 +277,37 @@ mysql> \. ./insert_record.sql
 
 ## fieldに制限をかける
 ```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+
+# 外部ファイルを使ってfieldに制限をかける
 mysql> \. ./restricted_field.sql
+> Query OK, 0 rows affected (0.02 sec)
+>
+> Query OK, 0 rows affected (0.02 sec)
+>
+> +-------+------------------+------+-----+---------+----------------+
+> | Field | Type             | Null | Key | Default | Extra          |
+> +-------+------------------+------+-----+---------+----------------+
+> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+> | name  | varchar(20)      | YES  | UNI | NULL    |                |
+> | score | float            | YES  |     | 0       |                |
+> +-------+------------------+------+-----+---------+----------------+
+> 3 rows in set (0.00 sec)
+>
+> Query OK, 4 rows affected (0.00 sec)
+> Records: 4  Duplicates: 0  Warnings: 0
+>
+> +----+--------+-------+
+> | id | name   | score |
+> +----+--------+-------+
+> |  1 | taro   |   5.8 |
+> |  2 | sola   |   8.2 |
+> |  3 | test   |  NULL |
+> |  4 | tanaka |   1.2 |
+> +----+--------+-------+
+> 4 rows in set (0.00 sec)
 ```

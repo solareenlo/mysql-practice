@@ -175,3 +175,25 @@ sudo mysql -u root -p
 mysql> drop user dbuser01@localhost;
 > Query OK, 0 raws affected (0.00 sec)
 ```
+
+## 外部ファイルを実行する
+先ずは, 外部ファイルcreate_myapp.sqlを作成し, rootユーザーでログインするときに外部ファイルを読み込ます方法.
+```bash
+myspl -u root < create_myapp.sql
+>
+# 何も反応がないけど, きちんとできてます.
+```
+
+もしくは, rootユーザーでログインした後に, 外部ファイルを読み込ます方法.
+```bash
+sudo mysql -u root
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> source ./create_myapp.sql
+# もしくは
+mysql> \. ./create_myapp.sql
+> Query OK, 0 rows affected (0.00 sec)
+>
+> Query OK, 1 row affected (0.00 sec)
+>
+> Query OK, 0 rows affected, 1 warning (0.00 sec)
+```

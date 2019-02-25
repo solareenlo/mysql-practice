@@ -205,6 +205,8 @@ mysql -u myapp_user -p myapp
 > Enter password:
 2VNAhigo@#
 > Welcome to the MySQL monitor. Commands end with ; or \g.
+
+# tableを外部ファイルを使って作成する
 \. ./create_table.sql
 > Query OK, 0 rows affected (0.00 sec)
 

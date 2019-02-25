@@ -10,9 +10,9 @@ desc users;
 insert into users (name, score) values
   ('taro', 5.8),
   ('sola', 8.2),
-  ('sola', 2.8),
+  -- ('sola', 2.8),
   ('test', null),
-  ('tanaka', 1.1),
+  -- ('tanaka', 1.1),
   ('tanaka', 1.2);
 
 select * from users;

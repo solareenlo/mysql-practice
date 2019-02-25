@@ -58,3 +58,10 @@ mysql> quit;
 mysql> \q
 >Bye
 ```
+
+## MySQLのデータ構造
+Database  
+  -> 複数のTable  
+    -> その中にid, title, bodyを持つ表があって,  
+    -> 行をRecord, Row, 列をField, Columと言う.  
+こういったDatabaseやTableやFieldやRecordを扱う言語をSQL(Structured Query Language)と言う.

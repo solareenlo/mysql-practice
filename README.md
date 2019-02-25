@@ -253,3 +253,17 @@ true/false;
   true -> 1 # 空文字を含むNull以外は全てtrueになる
   false -> 0 # Nullがfalse
 ```
+
+## recordの挿入
+```bash
+mysql> \. ./insert_record.sql
+> +----------------------+
+> | id  | name   | score |
+> +----------------------+
+> |   1 | taro   |   5.8 |
+> |   2 | sola   |   8.2 |
+> |   3 | test   |  10.1 |
+> |   4 | yamada |  NULL |
+> +----------------------|
+> 4 row in set (0.00 sec)
+```

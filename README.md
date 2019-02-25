@@ -267,3 +267,8 @@ mysql> \. ./insert_record.sql
 > +----------------------|
 > 4 row in set (0.00 sec)
 ```
+
+## fieldに制限をかける
+```bash
+mysql> \. ./restricted_field.sql
+```

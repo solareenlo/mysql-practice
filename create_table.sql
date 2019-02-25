@@ -1,4 +1,4 @@
-drop table if exists users
+drop table if exists users;
 create table users (
   id int unsigned,
   name varchar(20),

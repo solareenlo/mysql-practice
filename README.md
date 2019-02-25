@@ -111,4 +111,11 @@ mysql> select database();
 # 操作対象のDBを選択する
 mysql> use mydb02;
 > Database changed
+mysql> select database();
+> +--------------------+
+> | database()         |
+> +--------------------+
+> | mydb02             |
+> +--------------------|
+> 1 row in set (0.00 sec)
 ```

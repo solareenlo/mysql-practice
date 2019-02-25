@@ -66,7 +66,7 @@ Database
     -> 行をRecord, Row, 列をField, Columと言う.  
 こういったDatabaseやTableやFieldやRecordを扱う言語をSQL(Structured Query Language)と言う.
 
-## DBを操作する
+## DBを表示・新規作成・削除・操作対象にする
 mysql> の後に打ち込むコマンドをQuery(クエリ)と言う.  
 MySQLでのクエリは大文字小文字の区別がない.
 
@@ -196,4 +196,30 @@ mysql> \. ./create_myapp.sql
 > Query OK, 1 row affected (0.00 sec)
 >
 > Query OK, 0 rows affected, 1 warning (0.00 sec)
+```
+
+## Tableを新規作成・一覧表示・中身表示・削除する
+Talbeを外部ファイルで作成して, 削除する.
+```bash
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+\. ./create_table.sql
+> Query OK, 0 rows affected (0.00 sec)
+
+# tableの一覧を見る
+mysql> show tables;
+> tableの一覧が見れる
+
+# usersというtableの中身を見る
+mysql> desc users;
+> userというtableの中身が表示される
+> 3 rows in set (0.00 sec)
+
+# usersというtableの削除方法
+mysql> drop table users;
+> Query OK, 0 rows affected (0.00 sec)
+mysql> show tables;
+> Empty set (0.00 sec)
 ```

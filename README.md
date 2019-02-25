@@ -225,3 +225,29 @@ mysql> drop table users;
 mysql> show tables;
 > Empty set (0.00 sec)
 ```
+
+## MySQLが扱えるデータ型
+```bash
+number:
+- int # 整数型
+- float # 実数型
+- double # 倍精度実数型
+- int unsigned # 正の整数型
+
+string:
+- char # 固定長の文字列
+- char(4) # 4文字固定の文字列
+- varchar # 可変長の文字列
+- varchar(255) # 255バイトまでの可変長文字列
+- text # 可変長の文字列
+
+data/time;
+- date # 日付
+- time # 時間
+- datetime # 日時 '2020-02-22 20:22:33'と表示することができる
+
+true/false;
+- boolean # booleanは1桁の整数の型であるtinyint(1)で返される
+  true -> 1 # 空文字を含むNull以外は全てtrueになる
+  false -> 0 # Nullがfalse
+```

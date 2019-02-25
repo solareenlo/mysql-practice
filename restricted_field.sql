@@ -7,7 +7,7 @@ create table users (
 );
 desc users;
 
-insert into users (id, name, score) values
+insert into users (name, score) values
   ('taro', 5.8),
   ('sola', 8.2),
   ('sola', 2.8),

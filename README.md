@@ -60,14 +60,16 @@ mysql> \q
 ```
 
 ## MySQLのデータ構造
-Database  
-  -> 複数のTable  
-    -> その中にid, title, bodyを持つ表があって,  
-    -> 行をRecord, Row, 列をField, Columと言う.  
+```bash
+Database
+  -> 複数のTable
+    -> その中にid, title, bodyを持つ表があって,
+    -> 行をRecord, Row, 列をField, Columと言う.
+```
 こういったDatabaseやTableやFieldやRecordを扱う言語をSQL(Structured Query Language)と言う.
 
 ## DBを表示・新規作成・削除・操作対象にする
-mysql> の後に打ち込むコマンドをQuery(クエリ)と言う.  
+mysql> の後に打ち込むコマンドをQuery(クエリ)と言う.
 MySQLでのクエリは大文字小文字の区別がない.
 
 ```bash

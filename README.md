@@ -65,3 +65,50 @@ Database
     -> その中にid, title, bodyを持つ表があって,  
     -> 行をRecord, Row, 列をField, Columと言う.  
 こういったDatabaseやTableやFieldやRecordを扱う言語をSQL(Structured Query Language)と言う.
+
+## DBを操作する
+mysql> の後に打ち込むコマンドをQuery(クエリ)と言う.  
+MySQLでのクエリは大文字小文字の区別がない.
+
+```bash
+# DBを表示する
+mysql> show databases;
+> +--------------------+
+> | Database           |
+> +--------------------+
+> | information_schema |
+> | mysql              |
+> | performance_schema |
+> | sys                |
+> +--------------------|
+> 4 row in set (0.00 sec)
+# これらはシステムが用いているDBなのでうっかり消さないように注意する.
+
+# 新規にDBを作成する
+mysql> create database mydb01;
+> Query OK, 1 row affected (0.00 sec)
+# OKが出れば成功
+mysql> create database mydb02;
+> Query OK, 1 row affected (0.00 sec)
+mysql> create database mydb03;
+> Query OK, 1 row affected (0.00 sec)
+
+# DBを削除する
+mysql> drop database mydb03;
+> Query OK, 0 row affected (0.00 sec)
+# OKが出れば成功
+
+# 操作対象のDBを確認する
+mysql> select database();
+> +--------------------+
+> | database()         |
+> +--------------------+
+> | NULL               |
+> +--------------------|
+> 1 row in set (0.00 sec)
+# NULLが帰ってきたので, 操作対象のDBがないと言うこと
+
+# 操作対象のDBを選択する
+mysql> use mydb02;
+> Database changed
+```

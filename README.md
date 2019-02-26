@@ -364,3 +364,17 @@ mysql -u myapp_user -p myapp
 mysql> \. ./calculate_using_character.sql
 > 実行結果が返ってくる
 ```
+
+## enum型を使う
+enum型とは複数の文字列の中から１つだけを格納できるデータ型.  
+enumを使うことで有効なデータ以外は無効なデータとして扱うことができる.  
+[enum.sql](https://github.com/solareenlo/mysql-practice/blob/master/enum.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./enum.sql
+> 実行結果が返ってくる
+```

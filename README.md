@@ -362,3 +362,15 @@ mysql> \. ./change_table05.sql
 > +-----------------+
 > 1 row in set (0.00 sec)
 ```
+
+## Recordを抽出する
+extract_record.sqlをご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./extract_record.sql
+> 実行結果が返ってくる
+```

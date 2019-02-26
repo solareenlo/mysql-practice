@@ -364,7 +364,7 @@ mysql> \. ./change_table05.sql
 ```
 
 ## Recordを抽出する
-extract_record.sqlをご覧ください.
+[extract_record.sql](https://github.com/solareenlo/mysql-practice/blob/master/extract_record.sql)をご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -376,7 +376,7 @@ mysql> \. ./extract_record.sql
 ```
 
 ## 文字列を抽出条件にする
-extract_using_character.sqlをご覧ください.
+[extract_using_character.sql](https://github.com/solareenlo/mysql-practice/blob/master/extract_using_character.sql)をご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -388,7 +388,7 @@ mysql> \. ./extract_using_character.sql
 ```
 
 ## 数字で並び替えたり, 抽出条件を制限したりする
-extract_using_number.sqlをご覧ください.
+[extract_using_number.sql](https://github.com/solareenlo/mysql-practice/blob/master/extract_using_number.sql)をご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp

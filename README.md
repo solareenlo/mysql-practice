@@ -254,7 +254,7 @@ true/false;
   false -> 0 # Nullがfalse
 ```
 
-## recordの挿入
+## Recordの挿入
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -275,7 +275,7 @@ mysql> \. ./insert_record.sql
 > 4 row in set (0.00 sec)
 ```
 
-## fieldに制限をかける
+## Fieldに制限をかける
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -310,4 +310,67 @@ mysql> \. ./restricted_field.sql
 > |  4 | tanaka |   1.2 |
 > +----+--------+-------+
 > 4 rows in set (0.00 sec)
+```
+
+## Tableの構造を変える
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+
+# column(field)を追加する
+mysql> \. ./change_table01.sql
+> +-------+------------------+------+-----+---------+----------------+
+> | Field | Type             | Null | Key | Default | Extra          |
+> +-------+------------------+------+-----+---------+----------------+
+> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+> | name  | varchar(20)      | YES  |     | NULL    |                |
+> | score | float            | YES  |     | NULL    |                |
+> | email | varchar(255)     | YES  |     | NULL    |                |
+> +-------+------------------+------+-----+---------+----------------+
+> 4 rows in set (0.00 sec)
+
+# 任意の場所にcolmun(field)を追加する(今回はnameの後ろにemailを追加)
+mysql> \. ./change_table02.sql
+> +-------+------------------+------+-----+---------+----------------+
+> | Field | Type             | Null | Key | Default | Extra          |
+> +-------+------------------+------+-----+---------+----------------+
+> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+> | name  | varchar(20)      | YES  |     | NULL    |                |
+> | email | varchar(255)     | YES  |     | NULL    |                |
+> | score | float            | YES  |     | NULL    |                |
+> +-------+------------------+------+-----+---------+----------------+
+> 4 rows in set (0.00 sec)
+
+# column(field)を削除する
+mysql> \. ./change_table03.sql
+> +-------+------------------+------+-----+---------+----------------+
+> | Field | Type             | Null | Key | Default | Extra          |
+> +-------+------------------+------+-----+---------+----------------+
+> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+> | name  | varchar(20)      | YES  |     | NULL    |                |
+> +-------+------------------+------+-----+---------+----------------+
+> 2 rows in set (0.00 sec)
+
+# column(field)名の変更する
+mysql> \. ./change_table04.sql
+> +-----------+------------------+------+-----+---------+----------------+
+> | Field     | Type             | Null | Key | Default | Extra          |
+> +-----------+------------------+------+-----+---------+----------------+
+> | id        | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+> | user_name | varchar(80)      | YES  |     | nobody  |                |
+> | score     | float            | YES  |     | NULL    |                |
+> +-----------+------------------+------+-----+---------+----------------+
+> 3 rows in set (0.00 sec)
+
+# tableの名前を変更する
+mysql> \. ./change_table05.sql
+> +-----------------+
+> | Tables_in_myapp |
+> +-----------------+
+> | persons         |
+> +-----------------+
+> 1 row in set (0.00 sec)
 ```

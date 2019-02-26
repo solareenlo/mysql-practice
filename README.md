@@ -276,12 +276,7 @@ mysql> \. ./restricted_field.sql
 ```
 
 ## Tableの構造を変える
-[change_table01.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql) (field追加),  
-[change_table02.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table02.sql) (任意の場所にfield追加),  
-[change_table03.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table03.sql) (field削除),  
-[change_table04.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table04.sql) (field名変更),  
-[change_table05.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table05.sql) (table名変更)  
-をそれぞれご覧ください.
+[change_table01.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql)をご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -290,23 +285,11 @@ mysql -u myapp_user -p myapp
 > Welcome to the MySQL monitor. Commands end with ; or \g.
 
 # column(field)を追加する
-mysql> \. ./change_table01.sql
-> 実行結果が返ってくる
-
 # 任意の場所にcolmun(field)を追加する(今回はnameの後ろにemailを追加)
-mysql> \. ./change_table02.sql
-> 実行結果が返ってくる
-
 # column(field)を削除する
-mysql> \. ./change_table03.sql
-> 実行結果が返ってくる
-
 # column(field)名の変更する
-mysql> \. ./change_table04.sql
-> 実行結果が返ってくる
-
 # tableの名前を変更する
-mysql> \. ./change_table05.sql
+mysql> \. ./change_table.sql
 > 実行結果が返ってくる
 ```
 

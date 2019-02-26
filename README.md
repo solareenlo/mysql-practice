@@ -353,3 +353,14 @@ mysql> \. ./calculate.sql
 > 実行結果が返ってくる
 ```
 
+## 文字列の演算を行う
+[calculate_using_character.sql](https://github.com/solareenlo/mysql-practice/blob/master/calculate_using_character.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./calculate_using_character.sql
+> 実行結果が返ってくる
+```

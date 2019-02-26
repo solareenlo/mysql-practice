@@ -391,3 +391,15 @@ mysql -u myapp_user -p myapp
 mysql> \. ./set.sql
 > 実行結果が返ってくる
 ```
+
+## if, caseの使い方
+[if_case.sql](https://github.com/solareenlo/mysql-practice/blob/master/if_case.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./if_case.sql
+> 実行結果が返ってくる
+```

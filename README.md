@@ -276,11 +276,11 @@ mysql> \. ./restricted_field.sql
 ```
 
 ## Tableの構造を変える
-[change_table01.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql),  
-[change_table02.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table02.sql),  
-[change_table03.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table03.sql),  
-[change_table04.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table04.sql),  
-[change_table05.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table05.sql)  
+[change_table01.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql) (field追加),  
+[change_table02.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table02.sql) (任意の場所にfield追加),  
+[change_table03.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table03.sql) (field削除),  
+[change_table04.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table04.sql) (field名変更),  
+[change_table05.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table05.sql) (table名変更)  
 をそれぞれご覧ください.
 ```bash
 # まずDBにアクセス

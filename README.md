@@ -276,6 +276,12 @@ mysql> \. ./restricted_field.sql
 ```
 
 ## Tableの構造を変える
+[change_table01.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql),
+ [change_table02.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table02.sql),
+ [change_table03.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table03.sql),
+ [change_table04.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table04.sql),
+ [change_table05.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table05.sql)
+をそれぞれご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -370,6 +376,6 @@ mysql -u myapp_user -p myapp
 > Enter password:
 2VNAhigo@#
 > Welcome to the MySQL monitor. Commands end with ; or \g.
-mysql> \. ./[extract_using_number.sql](https://github.com/solareenlo/mysql-practice/blob/master/extract_using_number.sql)
+mysql> \. ./extract_using_number.sql
 > 実行結果が返ってくる
 ```

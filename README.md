@@ -378,3 +378,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./enum.sql
 > 実行結果が返ってくる
 ```
+
+## set型を使う
+set型を使うと複数の選択肢から複数個選べる.  
+[set.sql](https://github.com/solareenlo/mysql-practice/blob/master/set.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./set.sql
+> 実行結果が返ってくる
+```

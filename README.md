@@ -276,7 +276,7 @@ mysql> \. ./restricted_field.sql
 ```
 
 ## Tableの構造を変える
-[change_table.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql)をご覧ください.
+[change_table.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table.sql)をご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp

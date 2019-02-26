@@ -276,11 +276,11 @@ mysql> \. ./restricted_field.sql
 ```
 
 ## Tableの構造を変える
-[change_table01.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql),
- [change_table02.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table02.sql),
- [change_table03.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table03.sql),
- [change_table04.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table04.sql),
- [change_table05.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table05.sql)
+[change_table01.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table01.sql),  
+[change_table02.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table02.sql),  
+[change_table03.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table03.sql),  
+[change_table04.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table04.sql),  
+[change_table05.sql](https://github.com/solareenlo/mysql-practice/blob/master/change_table05.sql)  
 をそれぞれご覧ください.
 ```bash
 # まずDBにアクセス
@@ -291,57 +291,23 @@ mysql -u myapp_user -p myapp
 
 # column(field)を追加する
 mysql> \. ./change_table01.sql
-> +-------+------------------+------+-----+---------+----------------+
-> | Field | Type             | Null | Key | Default | Extra          |
-> +-------+------------------+------+-----+---------+----------------+
-> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-> | name  | varchar(20)      | YES  |     | NULL    |                |
-> | score | float            | YES  |     | NULL    |                |
-> | email | varchar(255)     | YES  |     | NULL    |                |
-> +-------+------------------+------+-----+---------+----------------+
-> 4 rows in set (0.00 sec)
+> 実行結果が返ってくる
 
 # 任意の場所にcolmun(field)を追加する(今回はnameの後ろにemailを追加)
 mysql> \. ./change_table02.sql
-> +-------+------------------+------+-----+---------+----------------+
-> | Field | Type             | Null | Key | Default | Extra          |
-> +-------+------------------+------+-----+---------+----------------+
-> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-> | name  | varchar(20)      | YES  |     | NULL    |                |
-> | email | varchar(255)     | YES  |     | NULL    |                |
-> | score | float            | YES  |     | NULL    |                |
-> +-------+------------------+------+-----+---------+----------------+
-> 4 rows in set (0.00 sec)
+> 実行結果が返ってくる
 
 # column(field)を削除する
 mysql> \. ./change_table03.sql
-> +-------+------------------+------+-----+---------+----------------+
-> | Field | Type             | Null | Key | Default | Extra          |
-> +-------+------------------+------+-----+---------+----------------+
-> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-> | name  | varchar(20)      | YES  |     | NULL    |                |
-> +-------+------------------+------+-----+---------+----------------+
-> 2 rows in set (0.00 sec)
+> 実行結果が返ってくる
 
 # column(field)名の変更する
 mysql> \. ./change_table04.sql
-> +-----------+------------------+------+-----+---------+----------------+
-> | Field     | Type             | Null | Key | Default | Extra          |
-> +-----------+------------------+------+-----+---------+----------------+
-> | id        | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-> | user_name | varchar(80)      | YES  |     | nobody  |                |
-> | score     | float            | YES  |     | NULL    |                |
-> +-----------+------------------+------+-----+---------+----------------+
-> 3 rows in set (0.00 sec)
+> 実行結果が返ってくる
 
 # tableの名前を変更する
 mysql> \. ./change_table05.sql
-> +-----------------+
-> | Tables_in_myapp |
-> +-----------------+
-> | persons         |
-> +-----------------+
-> 1 row in set (0.00 sec)
+> 実行結果が返ってくる
 ```
 
 ## Recordを抽出する

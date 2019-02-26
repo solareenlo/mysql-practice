@@ -370,6 +370,6 @@ mysql -u myapp_user -p myapp
 > Enter password:
 2VNAhigo@#
 > Welcome to the MySQL monitor. Commands end with ; or \g.
-mysql> \. ./extract_using_number.sql
+mysql> \. ./[extract_using_number.sql](https://github.com/solareenlo/mysql-practice/blob/master/extract_using_number.sql)
 > 実行結果が返ってくる
 ```

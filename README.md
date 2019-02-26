@@ -374,3 +374,15 @@ mysql -u myapp_user -p myapp
 mysql> \. ./extract_record.sql
 > 実行結果が返ってくる
 ```
+
+## 文字列を抽出条件にする
+extract_using_character.sqlをご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./extract_using_character.sql
+> 実行結果が返ってくる
+```

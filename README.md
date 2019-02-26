@@ -193,11 +193,6 @@ sudo mysql -u root
 mysql> source ./create_myapp.sql
 # もしくは
 mysql> \. ./create_myapp.sql
-> Query OK, 0 rows affected (0.00 sec)
->
-> Query OK, 1 row affected (0.00 sec)
->
-> Query OK, 0 rows affected, 1 warning (0.00 sec)
 ```
 
 ## Tableを新規作成・一覧表示・中身表示・削除する
@@ -285,10 +280,6 @@ mysql -u myapp_user -p myapp
 
 # 外部ファイルを使ってfieldに制限をかける
 mysql> \. ./restricted_field.sql
-> Query OK, 0 rows affected (0.02 sec)
->
-> Query OK, 0 rows affected (0.02 sec)
->
 > +-------+------------------+------+-----+---------+----------------+
 > | Field | Type             | Null | Key | Default | Extra          |
 > +-------+------------------+------+-----+---------+----------------+
@@ -297,9 +288,6 @@ mysql> \. ./restricted_field.sql
 > | score | float            | YES  |     | 0       |                |
 > +-------+------------------+------+-----+---------+----------------+
 > 3 rows in set (0.00 sec)
->
-> Query OK, 4 rows affected (0.00 sec)
-> Records: 4  Duplicates: 0  Warnings: 0
 >
 > +----+--------+-------+
 > | id | name   | score |

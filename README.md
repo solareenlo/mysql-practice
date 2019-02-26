@@ -340,3 +340,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./update_record.sql
 > 実行結果が返ってくる
 ```
+
+## 数値の演算を行ったり, 活用したりする
+[calculate.sql](https://github.com/solareenlo/mysql-practice/blob/master/calculate.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./calculate.sql
+> 実行結果が返ってくる
+```
+

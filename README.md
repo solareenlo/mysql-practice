@@ -328,3 +328,15 @@ mysql -u myapp_user -p myapp
 mysql> \. ./extract_using_number.sql
 > 実行結果が返ってくる
 ```
+
+## Recordを更新, 削除する
+[update_record.sql](https://github.com/solareenlo/mysql-practice/blob/master/update_record.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./update_record.sql
+> 実行結果が返ってくる
+```

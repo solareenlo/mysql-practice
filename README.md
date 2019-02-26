@@ -250,6 +250,7 @@ true/false;
 ```
 
 ## Recordの挿入
+[insert_record.sql](https://github.com/solareenlo/mysql-practice/blob/master/insert_record.sql)をご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -257,20 +258,12 @@ mysql -u myapp_user -p myapp
 2VNAhigo@#
 > Welcome to the MySQL monitor. Commands end with ; or \g.
 
-# 外部ファイルを使ってrecordを挿入
 mysql> \. ./insert_record.sql
-> +----------------------+
-> | id  | name   | score |
-> +----------------------+
-> |   1 | taro   |   5.8 |
-> |   2 | sola   |   8.2 |
-> |   3 | test   |  10.1 |
-> |   4 | yamada |  NULL |
-> +----------------------|
-> 4 row in set (0.00 sec)
+> 実行結果が返ってくる.
 ```
 
 ## Fieldに制限をかける
+[restricted_field.sql](https://github.com/solareenlo/mysql-practice/blob/master/restricted_field.sql)をご覧ください.
 ```bash
 # まずDBにアクセス
 mysql -u myapp_user -p myapp
@@ -278,26 +271,8 @@ mysql -u myapp_user -p myapp
 2VNAhigo@#
 > Welcome to the MySQL monitor. Commands end with ; or \g.
 
-# 外部ファイルを使ってfieldに制限をかける
 mysql> \. ./restricted_field.sql
-> +-------+------------------+------+-----+---------+----------------+
-> | Field | Type             | Null | Key | Default | Extra          |
-> +-------+------------------+------+-----+---------+----------------+
-> | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-> | name  | varchar(20)      | YES  | UNI | NULL    |                |
-> | score | float            | YES  |     | 0       |                |
-> +-------+------------------+------+-----+---------+----------------+
-> 3 rows in set (0.00 sec)
->
-> +----+--------+-------+
-> | id | name   | score |
-> +----+--------+-------+
-> |  1 | taro   |   5.8 |
-> |  2 | sola   |   8.2 |
-> |  3 | test   |  NULL |
-> |  4 | tanaka |   1.2 |
-> +----+--------+-------+
-> 4 rows in set (0.00 sec)
+> 実行結果が返ってくる.
 ```
 
 ## Tableの構造を変える

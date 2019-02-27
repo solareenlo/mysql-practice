@@ -531,3 +531,19 @@ mysql -u myapp_user -p myapp
 mysql> \. ./outter_join.sql
 > 実行結果が返ってくる
 ```
+
+## Foreign keyを使う
+- 外部キー制約(foreign key)を使うと先に作られた table の field にない data の挿入を許さない書き方ができる.
+- 紐付ける値同士の型は一致していないといけない.
+- 外部キー制約に合わないものはエラーになって table に書き込まれない.
+- 外部キー制約を設定すると, 関連する data がある場合には data の削除や更新が簡単にはできなくなる.
+- 詳しくは[foreign_key.sql](https://github.com/solareenlo/mysql-practice/blob/master/foreign_key.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./foreign_key.sql
+> 実行結果が返ってくる
+```

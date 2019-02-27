@@ -418,3 +418,20 @@ mysql -u myapp_user -p myapp
 mysql> \. ./make_table_using_extracted_data.sql
 > 実行結果が返ってくる
 ```
+
+## Dataの集計処理を行う
+- talbe内のnull以外のdataの個数を調べる.
+- table内の全てのdataの個数を調べる.
+- fieldの合計値, 最小値, 最大値, 平均値を調べる.
+- table内の重複しない値のみを抽出する.
+- table内の重複しない値の個数を調べる.
+- 詳しくは[aggregate_data.sql](https://github.com/solareenlo/mysql-practice/blob/master/aggregate_data.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./aggregate_data.sql
+> 実行結果が返ってくる
+```

@@ -44,7 +44,6 @@ select * from comments;
 */
 
 -- inner join = 2つの table に共通の data だけを取得する方法
--- outer join = 2つの table で一致しない data も含めて data を取得する方法
 -- posts の id と comments の post_id を inner join で結びつけて条件が合致する data だけ抽出する
 select * from posts inner join comments on posts.id = comments.post_id; -- inner は省略することもできる.
 /*

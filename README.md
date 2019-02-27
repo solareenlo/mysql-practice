@@ -435,3 +435,19 @@ mysql -u myapp_user -p myapp
 mysql> \. ./aggregate_data.sql
 > 実行結果が返ってくる
 ```
+
+## Group集計
+- groupごとに値を集計するには group by を用いる.
+- group by で集計した後の data に対して条件を付ける場合には where ではなく having を用いる.
+- having はグループ化に使った値や集計した値しか条件に使えない.
+- where と group by を一緒に使った場合は, where の条件でデータの抽出を行った後に group by でその集計を行うことになる.
+- 詳しくは[aggregate_group.sql](https://github.com/solareenlo/mysql-practice/blob/master/aggregate_group.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./aggregate_group.sql
+> 実行結果が返ってくる
+```

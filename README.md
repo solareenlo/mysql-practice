@@ -451,3 +451,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./aggregate_group.sql
 > 実行結果が返ってくる
 ```
+
+## Sub Queryを使う
+- 一時的にしか使わない tabale だと sub query を用いて, 新たな table を作らずに表示できる.
+- 詳しくは[sub_query.sql](https://github.com/solareenlo/mysql-practice/blob/master/sub_query.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./sub_query.sql
+> 実行結果が返ってくる
+```

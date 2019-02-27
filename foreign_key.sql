@@ -45,7 +45,7 @@ select * from comments;
 > |  1 |       1 | first comment for post 1  |
 > |  2 |       1 | second comment for post 1 |
 > |  3 |       3 | first comment for post 3  |
-+----+---------+---------------------------+
+> +----+---------+---------------------------+
 */
 
 -- 外部キー制約を設定すると, 関連する data がある場合には data の削除や更新が簡単にはできなくなる.

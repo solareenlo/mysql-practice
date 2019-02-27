@@ -464,3 +464,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./sub_query.sql
 > 実行結果が返ってくる
 ```
+
+## Viewを使う
+- 抽出条件に名前を付けて table の用に扱える view.
+- 詳しくは[view.sql](https://github.com/solareenlo/mysql-practice/blob/master/view.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./view.sql
+> 実行結果が返ってくる
+```

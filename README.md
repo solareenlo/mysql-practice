@@ -477,3 +477,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./view.sql
 > 実行結果が返ってくる
 ```
+
+## Transactionを使う
+- 複数の処理をひとまとめにできる transaction.
+- 詳しくは[transaction.sql](https://github.com/solareenlo/mysql-practice/blob/master/transaction.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./transaction.sql
+> 実行結果が返ってくる
+```

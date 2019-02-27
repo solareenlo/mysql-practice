@@ -517,3 +517,17 @@ mysql -u myapp_user -p myapp
 mysql> \. ./inner_join.sql
 > 実行結果が返ってくる
 ```
+
+## Outter join(外部結合)を使う
+- outer join (外部結合) = 2つの table で一致しない data も含めて data を取得する方法
+- 2つの内どちらを軸にするかを決める必要がある.
+- 詳しくは[outter_join.sql](https://github.com/solareenlo/mysql-practice/blob/master/outter_join.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./outter_join.sql
+> 実行結果が返ってくる
+```

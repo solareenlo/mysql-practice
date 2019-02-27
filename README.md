@@ -490,3 +490,17 @@ mysql -u myapp_user -p myapp
 mysql> \. ./transaction.sql
 > 実行結果が返ってくる
 ```
+
+## Indexを使う
+- index(索引)の設定をしておくと data の抽出が速くなる.
+- でも, index は data の追加や更新処理を行うたびに作り直されるので, あまり index を付けすぎると処理が遅くなる.
+- 詳しくは[index.sql](https://github.com/solareenlo/mysql-practice/blob/master/index.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./index.sql
+> 実行結果が返ってくる
+```

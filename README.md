@@ -403,3 +403,18 @@ mysql -u myapp_user -p myapp
 mysql> \. ./if_case.sql
 > 実行結果が返ってくる
 ```
+
+## 抽出結果をtableにする
+- caseで抽出した結果で新たにtableを作成する.
+- 既存のtableをそのままコピーして新たなtableを作成する.
+- 既存のtableの構造だけをコピーして新たなtableを作成する.
+- 詳しくは[make_table_using_extracted_data.sql](https://github.com/solareenlo/mysql-practice/blob/master/make_table_using_extracted_data.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./make_table_using_extracted_data.sql
+> 実行結果が返ってくる
+```

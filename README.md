@@ -504,3 +504,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./index.sql
 > 実行結果が返ってくる
 ```
+
+## Inner join(内部結合)を使う
+- inner join = 2つの table に共通の data だけを取得する方法
+- 詳しくは[inner_join.sql](https://github.com/solareenlo/mysql-practice/blob/master/inner_join.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./inner_join.sql
+> 実行結果が返ってくる
+```

@@ -625,3 +625,59 @@ mysql -u myapp_user -p myapp
 mysql> \. ./date.sql
 > 実行結果が返ってくる
 ```
+
+## Backupを行い復元できるようにする
+- backup を作成する方法はいろいろありますが, 簡単なは mysqldump を使うこと.
+```bash
+# まず backup する data を作成する.
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./date.sql # とかで data を作ってあげて,
+mysql> quit; # 一度 mysql を抜ける.
+
+# backupを取る.
+mysqldump -u myapp_user -p myapp > 201902_myapp.backup.sql
+> Enter password:
+2VNAhigo@#
+# これで backup が取れたことになる.
+
+# 次に一番はじめに作成した data を更新してから, 先程 backup した data で復元を行ってみる.
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> select * from posts;
+> +----+---------+--------+---------------------+---------------------+
+> | id | title   | body   | created             | updated             |
+> +----+---------+--------+---------------------+---------------------+
+> |  1 | title 1 | body 1 | 2019-02-28 16:26:27 | 2019-02-28 16:26:27 |
+> |  2 | title 2 | body 2 | 2016-12-31 10:10:10 | 2019-02-28 16:26:27 |
+> |  3 | title 3 | body 3 | 2019-02-28 16:26:27 | 2019-02-28 16:26:27 |
+> +----+---------+--------+---------------------+---------------------+
+
+# うっかり table の data を消す.
+mysql> delete from posts where id > 1;
+mysql> select * from posts;
+> +----+---------+--------+---------------------+---------------------+
+> | id | title   | body   | created             | updated             |
+> +----+---------+--------+---------------------+---------------------+
+> |  1 | title 1 | body 1 | 2019-02-28 16:26:27 | 2019-02-28 16:26:27 |
+> +----+---------+--------+---------------------+---------------------+
+
+# backup data を読み込む.
+mysql> \. ./201902_myapp.backup.sql
+# たくさん > Query OK, が出る.
+
+mysql> select * from posts;
+> +----+---------+--------+---------------------+---------------------+
+> | id | title   | body   | created             | updated             |
+> +----+---------+--------+---------------------+---------------------+
+> |  1 | title 1 | body 1 | 2019-02-28 16:26:27 | 2019-02-28 16:26:27 |
+> |  2 | title 2 | body 2 | 2016-12-31 10:10:10 | 2019-02-28 16:26:27 |
+> |  3 | title 3 | body 3 | 2019-02-28 16:26:27 | 2019-02-28 16:26:27 |
+> +----+---------+--------+---------------------+---------------------+
+# backup の復元完了.
+mysql> select
+```

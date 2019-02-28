@@ -1,6 +1,27 @@
 # mysql-practice
 MySQLの使い方
 
+## MySQLのデータ構造
+```bash
+Database
+  -> 複数のTable
+    -> その中にid, title, bodyを持つ表があって,
+    -> 行をRecord, Row, 列をField, Columと言う.
+```
+こういったDatabaseやTableやFieldやRecordを扱う言語をSQL(Structured Query Language)と言う.
+
+## SQLの実行順番
+|順番|操作名|命令文|
+|---|---|---|
+|1|テーブルの指定|from|
+|2|結合|on, join|
+|3|取得条件|where|
+|4|グループ化|group by|
+|5|関数|count, sum, avg, min, max|
+|6|having|having|
+|7|検索|select, distinct|
+|8|順序|order by|
+|9|limit|limit|
 ## MySQLの基本的な使い方
 ```bash
 # Ubuntuへのインストール
@@ -58,15 +79,6 @@ mysql> quit;
 mysql> \q
 >Bye
 ```
-
-## MySQLのデータ構造
-```bash
-Database
-  -> 複数のTable
-    -> その中にid, title, bodyを持つ表があって,
-    -> 行をRecord, Row, 列をField, Columと言う.
-```
-こういったDatabaseやTableやFieldやRecordを扱う言語をSQL(Structured Query Language)と言う.
 
 ## DBを表示・新規作成・削除・操作対象にする
 mysql> の後に打ち込むコマンドをQuery(クエリ)と言う.

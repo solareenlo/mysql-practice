@@ -576,3 +576,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./trigger.sql
 > 実行結果が返ってくる
 ```
+
+## triggerで複数の処理を行う
+- trigger で複数の処理を行うには begin end を使えば良い.
+- 詳しくは[trigger2.sql](https://github.com/solareenlo/mysql-practice/blob/master/trigger2.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./trigger2.sql
+> 実行結果が返ってくる
+```

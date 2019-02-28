@@ -611,3 +611,17 @@ mysql> select * from posts;
 > |  3 | title 3 | body 3 | 2019-02-28 15:31:16 | 2019-02-28 15:31:16 |
 > +----+---------+--------+---------------------+---------------------+
 ```
+
+## 日付を扱う
+- MySQLで日付を扱うには日付っぽい書式を使えば自動で認識してくれる.
+- 日付の変更, 日付の条件指定, 日付の計算, 日付の書式変更
+- 詳しくは[date.sql](https://github.com/solareenlo/mysql-practice/blob/master/date.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./date.sql
+> 実行結果が返ってくる
+```

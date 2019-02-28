@@ -627,7 +627,7 @@ mysql> \. ./date.sql
 ```
 
 ## Backupを行い復元できるようにする
-- backup を作成する方法はいろいろありますが, 簡単なは mysqldump を使うこと.
+- backup を作成する方法はいろいろありますが, 簡単な方法は mysqldump を使うこと.
 ```bash
 # まず backup する data を作成する.
 mysql -u myapp_user -p myapp
@@ -679,5 +679,5 @@ mysql> select * from posts;
 > |  3 | title 3 | body 3 | 2019-02-28 16:26:27 | 2019-02-28 16:26:27 |
 > +----+---------+--------+---------------------+---------------------+
 # backup の復元完了.
-mysql> select
+mysql> quit;
 ```

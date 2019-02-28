@@ -547,3 +547,16 @@ mysql -u myapp_user -p myapp
 mysql> \. ./foreign_key.sql
 > 実行結果が返ってくる
 ```
+
+## last_insert_id()を使う
+- last_insert_id() を使うと直前に挿入した record の id を引っ張ってきてくれる.
+- 詳しくは[last_insert_id.sql](https://github.com/solareenlo/mysql-practice/blob/master/last_insert_id.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./last_insert_id.sql
+> 実行結果が返ってくる
+```

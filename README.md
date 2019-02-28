@@ -589,3 +589,25 @@ mysql -u myapp_user -p myapp
 mysql> \. ./trigger2.sql
 > 実行結果が返ってくる
 ```
+
+## current_timestampを使う
+- on update current_timestamp で更新時にその時の日時で field を自動更新してくれる.
+- 詳しくは[current_timestamp.sql](https://github.com/solareenlo/mysql-practice/blob/master/current_timestamp.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./current_timestamp.sql
+> とりあえずの table が表示される.
+mysql> update posts set title = 'updated' where id = 2;
+mysql> select * from posts;
+> +----+---------+--------+---------------------+---------------------+
+> | id | title   | body   | created             | updated             |
+> +----+---------+--------+---------------------+---------------------+
+> |  1 | title 1 | body 1 | 2019-02-28 15:31:16 | 2019-02-28 15:31:16 |
+> |  2 | updated | body 2 | 2019-02-28 15:31:16 | 2019-02-28 15:38:20 |
+> |  3 | title 3 | body 3 | 2019-02-28 15:31:16 | 2019-02-28 15:31:16 |
+> +----+---------+--------+---------------------+---------------------+
+```

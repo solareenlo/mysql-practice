@@ -560,3 +560,19 @@ mysql -u myapp_user -p myapp
 mysql> \. ./last_insert_id.sql
 > 実行結果が返ってくる
 ```
+
+## triggerを使う
+- ある table で何らかの処理が行われたら, それを trigger にして, またべつの処理を走らせることができる機能を trigger という.
+- insert, delete, updateなどの処理に対して trigger を発動できる.
+- after, before で設定できる.
+- field を縦表示するには`show triggers \G`のように, 後ろに`\G`を付けてあげれば良い.
+- 詳しくは[trigger.sql](https://github.com/solareenlo/mysql-practice/blob/master/trigger.sql)をご覧ください.
+```bash
+# まずDBにアクセス
+mysql -u myapp_user -p myapp
+> Enter password:
+2VNAhigo@#
+> Welcome to the MySQL monitor. Commands end with ; or \g.
+mysql> \. ./trigger.sql
+> 実行結果が返ってくる
+```

@@ -216,7 +216,7 @@ mysql -u myapp_user -p myapp
 > Welcome to the MySQL monitor. Commands end with ; or \g.
 
 # tableを外部ファイルを使って作成する
-\. ./create_table.sql
+mysql> \. ./create_table.sql
 > Query OK, 0 rows affected (0.00 sec)
 
 # tableの一覧を見る

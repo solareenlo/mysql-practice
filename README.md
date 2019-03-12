@@ -191,7 +191,7 @@ mysql> drop user dbuser01@localhost;
 ```
 
 ## 外部ファイルを実行する
-先ずは, 外部ファイルcreate_myapp.sqlを作成し, rootユーザーでログインするときに外部ファイルを読み込ます方法.
+先ずは, 外部ファイル[create_myapp.sql](https://github.com/solareenlo/mysql-practice/blob/master/create_myapp.sql)を作成し, rootユーザーでログインするときに外部ファイルを読み込ます方法.
 ```bash
 mysql -u root < create_myapp.sql
 >
